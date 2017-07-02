@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     MainWidget w;
     w.show();
 
-    EchoClient client(QUrl(QStringLiteral("ws://localhost:4567/echo")));
+    EchoClient client(QUrl(QStringLiteral("ws://localhost:4567/desktop")));
     QObject::connect(&client, &EchoClient::closed, &a, &QApplication::quit);
 
     return a.exec();
