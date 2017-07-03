@@ -13,31 +13,43 @@
   <property name="windowTitle">
    <string>MainWidget</string>
   </property>
-  <widget class="QPushButton" name="connectButton">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>20</y>
-     <width>191</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Connect Web Socket</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="outputLabel">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>50</y>
+     <y>140</y>
      <width>361</width>
-     <height>241</height>
+     <height>151</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>10</y>
+     <width>170</width>
+     <height>113</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="usernameLineEdit"/>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="computerNameLineEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="connectButton">
+      <property name="text">
+       <string>Register Computer</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

@@ -4,16 +4,20 @@
 #include <QtCore/QObject>
 #include <QtWebSockets/QWebSocket>
 
-class EchoClient : public QObject
+class WebSocketClient : public QObject
 {
     Q_OBJECT
 public:
-    explicit EchoClient(const QUrl &url, QObject *parent = Q_NULLPTR);
+    explicit WebSocketClient(const QUrl &url, QObject *parent = Q_NULLPTR);
 
-Q_SIGNALS:
+signals:
     void closed();
+    void messageRecieved(QString message);
 
-private Q_SLOTS:
+public slots:
+    void connectButtonClicked(QString username, QString computerName);
+
+private slots:
     void onConnected();
     void onTextMessageReceived(QString message);
 
